@@ -2,6 +2,14 @@ import pandas as pd
 import numpy as np
 from pandas.compat import StringIO
 
+#This file appends the log files of API data together. Because of memory limits in Python, this file
+#has to be edited many times to eventually put together one game.json file of all the twitch channels.
+#The same will have to be replicated for the twitch hosts log files.
+
+#Currently we have a format error in the log files where some channel IDs are too short and combine
+#columns with the viewers. Once this is solved, we can use the SQL transformations to prove our 
+#statistics.
+
 #df = pd.read_csv('twitch_channels.log', sep = '\t', header = None, engine = 'python')
 #df1 = pd.read_csv('twitch_channels.log.1', sep = '\t', header = None, engine = 'python')
 #df2 = pd.read_csv('twitch_channels.log.2', sep = '\t', header = None, engine = 'python')
