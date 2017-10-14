@@ -47,7 +47,7 @@ ON twitch_channels.ID = twitch_hosts.hostee
 WHERE twitch_hosts.viewers < twitch_channels.Viewers
 
 #Number of views of top 10 hostees boosted by hoster next to the hostees own viewers
-SELECT * DISCTINCT ID, Viewers, SUM(viewers) as hosted_viewers
+SELECT * DISTINCT ID, Viewers, SUM(viewers) as hosted_viewers
 FROM twitch_channels
 INNER JOIN twitch_hosts
 ON twitch_channels.ID = twitch_hosts.hostee
